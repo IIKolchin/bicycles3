@@ -1,0 +1,36 @@
+$black: #151515;
+$background: #f4f4f4;
+$green: #24b47e;
+$gray: #333333;
+$grayLight: #d7d4d4;
+$white: #fff;
+
+%title-style {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+}
+
+%text-style {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 70%;
+    color: #222222;
+}
+
+%title-mobile {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+}
+
+%text-mobile {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #222222;
+    opacity: 70%;
+}

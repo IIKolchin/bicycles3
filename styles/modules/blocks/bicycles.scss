@@ -1,0 +1,26 @@
+.bicycles {
+    margin: 0 8.33%;
+
+    &__slider {
+        display: block;
+    }
+
+    &__slider-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .bicycles {
+        padding: 40px 0 22px;
+        margin: 0 5.62%;
+
+        &__slider {
+            display: none;
+
+            &-mobile {
+                display: block;
+            }
+        }
+    }
+}

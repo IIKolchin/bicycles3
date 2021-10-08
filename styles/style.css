@@ -1,0 +1,1016 @@
+@import "../vendor/normalize.css";
+@import "../vendor/fonts/fonts.css";
+.workout__title, .bicycle__title, .slider__title, .triathlon__title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+}
+
+.workout__text, .bicycle__button, .slider__text, .triathlon__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
+}
+
+.triathlon__title_mobile {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+}
+
+.triathlon__text_mobile {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #222222;
+  opacity: 70%;
+}
+
+.page {
+  box-sizing: border-box;
+  font-family: "inter", Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 1440px;
+  background: #f4f4f4;
+  color: #151515;
+}
+.dark .page {
+  background: #333333;
+  color: #fff;
+}
+
+.header {
+  box-sizing: border-box;
+  min-height: 74px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  z-index: 10;
+}
+.dark .header {
+  background-color: #333333;
+}
+.header__links {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+.header__link {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 28px 34px 28px 0;
+}
+.header__link:last-of-type {
+  padding-right: 120px;
+}
+.header__link_mobile {
+  padding: 0 0 32px 0;
+  text-align: center;
+}
+.header__link_mobile:last-of-type {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.header__ref {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #151515;
+  transition: 0.5s;
+}
+.dark .header__ref {
+  color: #fff;
+}
+.dark .header__ref:hover {
+  opacity: 65%;
+}
+.header__ref:hover {
+  opacity: 75%;
+}
+.header__ref_mobile {
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+}
+.header__button_mobile {
+  padding: 28px 18px 27px 280px;
+}
+.header__line {
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #151515;
+}
+.header__line:last-of-type {
+  margin-bottom: 0;
+}
+.dark .header__line {
+  background: #fff;
+}
+.header_mobile {
+  display: none;
+}
+.header_menu {
+  display: none;
+}
+.header_menu-on {
+  display: block;
+}
+.header__close {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 26px 20px 100px 282px;
+  width: 22px;
+  height: 22px;
+  background: url(../images/close.svg);
+  background-position: center;
+}
+.dark .header__close {
+  background: url(../images/closeWhite.svg);
+  background-position: center;
+}
+.header__switch {
+  justify-content: center;
+  margin: 316px 28.75% 38px;
+}
+
+@media (max-width: 600px) {
+  .header__links {
+    display: none;
+  }
+  .header_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    display: block;
+  }
+  .header__links_mobile {
+    display: block;
+  }
+  .header_mobile-off {
+    display: none;
+  }
+  .header_menu {
+    position: relative;
+  }
+}
+.triathlon {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8.33%;
+  margin-top: 74px;
+}
+.triathlon__title {
+  margin-top: 80px;
+  max-width: 460px;
+}
+.triathlon__title_mobile {
+  margin: 0 0 40px;
+  min-width: 284px;
+}
+.triathlon__text {
+  margin: 50px 0;
+  max-width: 460px;
+}
+.dark .triathlon__text {
+  color: #e5e5e5;
+}
+.triathlon__text_mobile {
+  display: none;
+  margin: 40px 0;
+}
+.triathlon__button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 106.24%;
+  text-decoration: none;
+  width: 180px;
+  border-radius: 4px;
+  color: #fff;
+  background: linear-gradient(to left, #24b47e 50%, #319e75 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+.triathlon__button:hover {
+  background-position: left;
+}
+.triathlon__button_mobile {
+  width: 100%;
+}
+.triathlon__image {
+  vertical-align: top;
+  margin-top: 20px;
+  width: 46.2%;
+}
+.triathlon__image_mobile {
+  vertical-align: top;
+  width: 89.4%;
+  margin-left: 30px;
+}
+.triathlon__bike {
+  position: relative;
+  display: flex;
+  margin-top: 167px;
+}
+.triathlon__bike-name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+.triathlon__bike-line {
+  width: 132px;
+  height: 2px;
+  background-color: #d7d4d4;
+  margin: 10px 154px 0 30px;
+}
+.dark .triathlon__bike-line {
+  background-color: #707070;
+}
+.triathlon__bike-hallway {
+  position: absolute;
+  top: -270px;
+  left: 510px;
+  width: 440px;
+  height: 430px;
+}
+.triathlon__bike-hallway_mobile {
+  display: none;
+}
+.triathlon__bike-image {
+  border-radius: 20px;
+  position: sticky;
+  top: 30px;
+  left: 630px;
+}
+.triathlon__bike-image_mobile {
+  border-radius: 20px;
+  position: sticky;
+  width: 234px;
+}
+.triathlon_mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .triathlon__bike-hallway {
+    top: -250px;
+    left: 350px;
+    width: 300px;
+  }
+  .triathlon__bike-image {
+    width: 300px;
+  }
+  .triathlon__title {
+    max-width: 340px;
+    font-size: 46px;
+  }
+  .triathlon__text {
+    width: 340px;
+    font-size: 16px;
+  }
+  .triathlon__bike-line {
+    margin-right: 0;
+  }
+  .triathlon__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .triathlon__bike {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .triathlon {
+    padding-left: 5%;
+  }
+  .triathlon__bike-hallway {
+    width: 250px;
+  }
+  .triathlon__bike-image {
+    width: 250px;
+  }
+  .triathlon__title {
+    max-width: 240px;
+    font-size: 38px;
+  }
+  .triathlon__text {
+    width: 80%;
+    font-size: 16px;
+  }
+  .triathlon__image {
+    width: 400px;
+    height: 548px;
+  }
+  .triathlon__bike-line {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .triathlon {
+    margin-top: 74px;
+    padding-left: 0;
+  }
+  .triathlon__group, .triathlon__image {
+    display: none;
+  }
+  .triathlon__title {
+    margin-left: 30px;
+  }
+  .triathlon_mobile {
+    display: block;
+    position: relative;
+    padding: 40px 5.62%;
+  }
+  .triathlon__bike-hallway {
+    display: none;
+  }
+  .triathlon__bike-hallway_mobile {
+    display: block;
+    position: absolute;
+    top: 240px;
+    left: 18px;
+    width: 234px;
+    height: 200px;
+  }
+  .triathlon__text {
+    width: 100%;
+  }
+  .triathlon__text_mobile {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .triathlon__text {
+    font-size: 12px;
+  }
+  .triathlon__title {
+    margin-left: 0;
+    font-size: 32px;
+  }
+}
+.merks {
+  display: flex;
+}
+.merks__quote {
+  margin: 0;
+}
+.merks__image {
+  vertical-align: top;
+  margin: 120px 0 60px 8.3%;
+  width: 45.1%;
+}
+.merks__title {
+  margin: 120px 17.9% 0 80px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+}
+.merks__name {
+  margin: 262px 0 6px 80px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+}
+.merks__job {
+  margin: 0 0 0 80px;
+  font-size: 16px;
+  line-height: 28px;
+  opacity: 70%;
+  color: #222222;
+}
+.dark .merks__job {
+  color: #e5e5e5;
+}
+.merks__line-mobile {
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: #e3e3e3;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  .merks__image {
+    width: 50%;
+  }
+  .merks__title {
+    margin-right: 30px;
+    font-size: 22px;
+  }
+  .merks__name {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .merks {
+    display: block;
+    padding: 40px 5.62%;
+  }
+  .merks__line-mobile {
+    display: block;
+  }
+  .merks__image {
+    width: 100%;
+    margin: 0;
+  }
+  .merks__title {
+    margin: 40px 0;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .merks__name {
+    margin-top: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .merks__job {
+    margin-left: 0;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+.slider {
+  width: 100%;
+}
+.slider__container_mobile {
+  display: none;
+}
+.slider__title {
+  margin: 60px 0 50px 120px;
+}
+.slider__text {
+  margin: 0 0 80px 120px;
+  max-width: 460px;
+}
+.dark .slider__text {
+  color: #e5e5e5;
+}
+.slider__pic {
+  display: flex;
+  overflow: hidden;
+  margin-left: 120px;
+}
+.slider__image {
+  vertical-align: top;
+  margin: 0 40px 50px 0;
+  width: 49.2%;
+}
+.slider__image_mobile {
+  vertical-align: top;
+  width: 88.75%;
+  margin: 0 18px 40px;
+}
+.slider__buttons {
+  display: flex;
+  margin: 0 0 60px 120px;
+}
+.slider__buttons_mobile {
+  position: absolute;
+  top: 47px;
+  right: 18px;
+  z-index: 2;
+  border-radius: 20px;
+}
+.slider__button-prev {
+  background: url(../images/left.svg);
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.dark .slider__button-prev {
+  background: url(../images/leftGrey.svg);
+}
+.dark .slider__button-prev:hover {
+  opacity: 60%;
+}
+.slider__button-prev:hover {
+  opacity: 75%;
+}
+.slider__button-prev_mobile {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  border-radius: 20px;
+}
+.dark .slider__button-prev_mobile {
+  background: url(../images/leftGrey.svg);
+  background-size: cover;
+  border-radius: 20px;
+}
+.slider__button-next {
+  background: url(../images/right.svg);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.dark .slider__button-next {
+  background: url(../images/rightGrey.svg);
+}
+.dark .slider__button-next:hover {
+  opacity: 60%;
+}
+.slider__button-next:hover {
+  opacity: 75%;
+}
+.slider__button-next_mobile {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  border-radius: 20px;
+}
+.dark .slider__button-next_mobile {
+  background: url(../images/rightGrey.svg);
+  background-size: cover;
+  border-radius: 20px;
+}
+.slider__line {
+  width: 88.75%;
+  margin-left: 5.62%;
+  margin-bottom: 40px;
+}
+.slider__pagination .swiper-pagination-bullet {
+  background-color: #151515;
+}
+.dark .slider__pagination .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .slider__pic {
+    width: 150%;
+  }
+  .slider__image:last-of-type {
+    display: none;
+  }
+  .slider__title, .slider__text, .slider__pic {
+    margin-left: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .slider {
+    padding-top: 40px;
+  }
+  .slider__container {
+    display: none;
+  }
+  .slider__container_mobile {
+    display: block;
+    position: relative;
+  }
+  .slider__title_mobile {
+    margin: 0 0 40px 18px;
+  }
+  .slider__text_mobile {
+    margin: 0 18px 40px;
+  }
+}
+.bicycle {
+  display: flex;
+  justify-content: space-between;
+}
+.bicycle-mobile {
+  display: none;
+}
+.bicycle__buttons {
+  display: flex;
+}
+.bicycle__button {
+  margin: 92px 40px 120px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.dark .bicycle__button {
+  color: #e5e5e5;
+  transition: 0.5s;
+}
+.dark .bicycle__button:hover {
+  opacity: 50%;
+}
+.bicycle__button:last-of-type {
+  margin-right: 0;
+}
+.bicycle__button:hover {
+  opacity: 60%;
+}
+.bicycle__button-active {
+  color: #151515;
+  font-weight: 600;
+  opacity: 1;
+}
+.dark .bicycle__button-active {
+  color: #fff;
+}
+.bicycle__title {
+  padding: 0;
+  height: 60px;
+  margin: 60px 0 120px 0;
+}
+.bicycle__title-mobile {
+  margin: 0 0 40px;
+}
+.bicycle__pic {
+  margin: 0;
+  display: flex;
+}
+.bicycle__image {
+  border-radius: 20px;
+  min-width: 40%;
+}
+.bicycle__image-mobile {
+  width: 89.4%;
+  margin: 35px 15px 3px;
+}
+.bicycle__group {
+  margin: 0 30px 0 0;
+  width: 31.66%;
+}
+.bicycle__group:last-of-type {
+  margin-right: 0;
+}
+.bicycle__name {
+  margin: 22px 0 60px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.dark .bicycle__name {
+  color: #fff;
+}
+.bicycle__name-mobile {
+  text-align: center;
+  margin: 0 72px 36px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.dark .bicycle__name-mobile {
+  color: #fff;
+}
+.bicycle__link {
+  text-decoration: none;
+  color: #151515;
+}
+.bicycle__link-mobile {
+  text-decoration: none;
+  color: #151515;
+}
+.bicycle__line {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1380px) {
+  .bicycle__title {
+    font-size: 46px;
+  }
+  .bicycle__group {
+    max-width: 80%;
+  }
+  .bicycle__image {
+    max-width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .bicycle {
+    display: none;
+  }
+  .bicycle-mobile {
+    display: block;
+  }
+  .dark .bicycle__button_mobile {
+    color: #fff;
+  }
+  .bicycle__buttons-mobile {
+    width: 114px;
+    height: 30px;
+    background: #f4f4f4;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    border-radius: 2px;
+    border-color: #e3e3e3;
+  }
+  .dark .bicycle__buttons-mobile {
+    background: #333333;
+    color: #fff;
+  }
+}
+.bicycles {
+  margin: 0 8.33%;
+}
+.bicycles__slider {
+  display: block;
+}
+.bicycles__slider-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .bicycles {
+    padding: 40px 0 22px;
+    margin: 0 5.62%;
+  }
+  .bicycles__slider {
+    display: none;
+  }
+  .bicycles__slider-mobile {
+    display: block;
+  }
+}
+.workout {
+  display: flex;
+  padding: 150px 120px 120px;
+}
+.workout__title {
+  margin: 0 0 50px 0;
+}
+.workout__title_mobile {
+  display: none;
+  margin: 40px 0;
+}
+.workout__text {
+  margin: 0 25.8% 182px 0;
+}
+.dark .workout__text {
+  color: #e5e5e5;
+}
+.workout__text_mobile {
+  display: none;
+  margin: 40px 0;
+}
+.workout__link {
+  text-decoration: none;
+  color: #151515;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.dark .workout__link {
+  color: #fff;
+}
+.dark .workout__link:hover {
+  opacity: 65%;
+}
+.workout__link:hover {
+  opacity: 75%;
+}
+.workout__link:first-of-type {
+  margin-right: 30px;
+}
+.workout__link_mobile {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+.workout__image {
+  width: 48.3%;
+}
+.workout__image_mobile {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .workout {
+    padding: 120px 80px 100px;
+  }
+}
+@media (max-width: 1100px) {
+  .workout {
+    padding: 100px 60px 80px;
+  }
+  .workout__text {
+    margin-bottom: 50px;
+    margin-right: 5%;
+    font-size: 16px;
+  }
+  .workout__title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 850px) {
+  .workout {
+    display: block;
+    padding: 40px 5.62% 60px;
+  }
+  .workout__group {
+    display: none;
+  }
+  .workout__image {
+    display: none;
+  }
+  .workout__title_mobile {
+    display: block;
+  }
+  .workout__image_mobile {
+    display: block;
+  }
+  .workout__text_mobile {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .workout__links_mobile {
+    display: flex;
+  }
+  .workout__link_mobile {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .workout__text_mobile {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .workout__title {
+    font-size: 32px;
+  }
+}
+.footer {
+  box-sizing: border-box;
+  padding: 80px 120px 60px;
+  background: #efefef;
+}
+.dark .footer {
+  background: #2f2f2f;
+}
+.footer__title {
+  width: 230px;
+  margin: 0 0 50px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+.footer__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.footer__group_mobile {
+  display: none;
+}
+.footer__switch {
+  display: flex;
+}
+.footer__icon-sun {
+  margin-right: 22px;
+  width: 28px;
+  height: 28px;
+  background-image: url(../images/day.svg);
+}
+.dark .footer__icon-sun {
+  background-image: url(../images/dayGrey.svg);
+}
+.footer__icon-button {
+  margin-right: 22px;
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background-image: url(../images/switch.svg);
+}
+.dark .footer__icon-button {
+  background-image: url(../images/switchGrey.svg);
+}
+.footer__icon-moon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/night.svg);
+}
+.dark .footer__icon-moon {
+  background-image: url(../images/nightGrey.svg);
+}
+.footer__copyright {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 116%;
+  color: #cfcfcf;
+}
+.dark .footer__copyright {
+  color: #565656;
+}
+.footer__form {
+  margin-bottom: 92px;
+}
+.footer__input-container {
+  position: relative;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.footer__input {
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 70%;
+  border-color: rgba(199, 199, 199, 0.5);
+  background-color: #efefef;
+}
+.footer__input:hover {
+  color: #151515;
+  opacity: 1;
+  cursor: pointer;
+}
+.dark .footer__input {
+  background: #2f2f2f;
+  color: #fff;
+  opacity: 70%;
+}
+.dark .footer__input:hover {
+  opacity: 1;
+}
+.footer__input-button {
+  visibility: hidden;
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  top: 12px;
+  left: 330px;
+}
+.footer__input-button-on {
+  visibility: visible;
+}
+.dark .footer__input-button {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 5.62% 0;
+  }
+  .footer__group {
+    display: none;
+  }
+  .footer__group_mobile {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+  .footer__form {
+    margin-bottom: 90px;
+  }
+  .footer__title {
+    margin-bottom: 40px;
+  }
+  .footer__input {
+    width: 284px;
+  }
+  .footer__input-button {
+    top: 0;
+    left: 255px;
+    height: 50px;
+  }
+  .footer__copyright {
+    margin-bottom: 0;
+  }
+  .footer__logo {
+    background: url(../images/logoFooterBlack.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0;
+    width: 38px;
+    height: 38px;
+  }
+  .dark .footer__logo {
+    background: url(../images/logoFooterWhite.svg);
+  }
+}
