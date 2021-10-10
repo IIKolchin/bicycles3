@@ -15,14 +15,14 @@
   color: #222222;
 }
 
-.triathlon__title_mobile {
+.title-mobile, .workout__text_mobile {
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -0.5px;
 }
 
-.triathlon__text_mobile {
+.text-mobile {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -146,7 +146,7 @@
 }
 .header__switch {
   justify-content: center;
-  margin: 83.6% 28.75% 10%;
+  margin: 62vh 28.75% 38px;
 }
 
 @media (max-width: 600px) {
@@ -181,20 +181,12 @@
   margin-top: 80px;
   max-width: 460px;
 }
-.triathlon__title_mobile {
-  margin: 0 0 40px;
-  min-width: 284px;
-}
 .triathlon__text {
   margin: 50px 0;
   max-width: 460px;
 }
 .dark .triathlon__text {
   color: #e5e5e5;
-}
-.triathlon__text_mobile {
-  display: none;
-  margin: 40px 0;
 }
 .triathlon__button {
   position: relative;
@@ -223,7 +215,7 @@
   margin-top: 20px;
   width: 46.2%;
 }
-.triathlon__image_mobile {
+.triathlon__image-mobile {
   vertical-align: top;
   width: 89.4%;
   margin-left: 30px;
@@ -338,8 +330,10 @@
   }
   .triathlon__title {
     margin-left: 30px;
+    margin-top: 0;
   }
   .triathlon_mobile {
+    margin-top: 0;
     display: block;
     position: relative;
     padding: 40px 5.62%;
@@ -365,9 +359,12 @@
 @media (max-width: 500px) {
   .triathlon__text {
     font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .triathlon__title {
-    margin-left: 0;
+    margin: 0 0 40px;
+    min-width: 284px;
     font-size: 32px;
   }
 }
@@ -405,13 +402,6 @@
 .dark .merks__job {
   color: #e5e5e5;
 }
-.merks__line-mobile {
-  display: none;
-  width: 100%;
-  height: 1px;
-  background-color: #e3e3e3;
-  margin-bottom: 20px;
-}
 
 @media (max-width: 1100px) {
   .merks__image {
@@ -429,9 +419,6 @@
   .merks {
     display: block;
     padding: 40px 5.62%;
-  }
-  .merks__line-mobile {
-    display: block;
   }
   .merks__image {
     width: 100%;
@@ -455,6 +442,9 @@
     margin-left: 0;
     font-size: 10px;
     line-height: 16px;
+  }
+  .merks__line {
+    margin-bottom: 20px;
   }
 }
 .slider {
@@ -483,7 +473,7 @@
   margin: 0 40px 50px 0;
   width: 49.2%;
 }
-.slider__image_mobile {
+.slider__image-mobile {
   vertical-align: top;
   width: 88.75%;
   margin: 0 18px 40px;
@@ -500,6 +490,8 @@
   border-radius: 20px;
 }
 .slider__button-prev {
+  padding: 0;
+  border: none;
   background: url(../images/left.svg);
   margin-right: 20px;
   width: 50px;
@@ -529,6 +521,8 @@
   border-radius: 20px;
 }
 .slider__button-next {
+  border: none;
+  padding: 0;
   background: url(../images/right.svg);
   width: 50px;
   height: 50px;
@@ -556,9 +550,7 @@
   border-radius: 20px;
 }
 .slider__line {
-  width: 88.75%;
-  margin-left: 5.62%;
-  margin-bottom: 40px;
+  display: none;
 }
 .slider__pagination .swiper-pagination-bullet {
   background-color: #151515;
@@ -578,6 +570,11 @@
     margin-left: 60px;
   }
 }
+@media (max-width: 750px) {
+  .slider__title {
+    font-size: 38px;
+  }
+}
 @media (max-width: 600px) {
   .slider {
     padding-top: 40px;
@@ -589,11 +586,18 @@
     display: block;
     position: relative;
   }
-  .slider__title_mobile {
-    margin: 0 0 40px 18px;
+  .slider__title {
+    font-size: 32px;
+    margin-top: 0;
+    margin-left: 18px;
+    margin-bottom: 40px;
   }
-  .slider__text_mobile {
+  .slider__text {
     margin: 0 18px 40px;
+  }
+  .slider__line {
+    width: 88.75%;
+    margin: 0 5.62% 40px;
   }
 }
 .bicycle {
@@ -638,7 +642,7 @@
   margin: 60px 0 120px 0;
 }
 .bicycle__title-mobile {
-  margin: 0 0 40px;
+  margin: 40px 0;
 }
 .bicycle__pic {
   margin: 0;
@@ -700,6 +704,11 @@
     max-width: 80%;
   }
 }
+@media (max-width: 750px) {
+  .bicycle__title {
+    font-size: 38px;
+  }
+}
 @media (max-width: 600px) {
   .bicycle {
     display: none;
@@ -753,10 +762,6 @@
 }
 .workout__title {
   margin: 0 0 50px 0;
-}
-.workout__title_mobile {
-  display: none;
-  margin: 40px 0;
 }
 .workout__text {
   margin: 0 25.8% 182px 0;
@@ -831,9 +836,6 @@
   .workout__image {
     display: none;
   }
-  .workout__title_mobile {
-    display: block;
-  }
   .workout__image_mobile {
     display: block;
   }
@@ -850,13 +852,23 @@
     display: block;
   }
 }
+@media (max-width: 750px) {
+  .workout__title {
+    font-size: 38px;
+  }
+}
 @media (max-width: 600px) {
-  .workout__text_mobile {
+  .workout__text {
     font-size: 12px;
     line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 0;
   }
   .workout__title {
     font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 .footer {
@@ -881,36 +893,6 @@
 }
 .footer__group_mobile {
   display: none;
-}
-.footer__switch {
-  display: flex;
-}
-.footer__icon-sun {
-  margin-right: 22px;
-  width: 28px;
-  height: 28px;
-  background-image: url(../images/day.svg);
-}
-.dark .footer__icon-sun {
-  background-image: url(../images/dayGrey.svg);
-}
-.footer__icon-button {
-  margin-right: 22px;
-  width: 44px;
-  height: 24px;
-  border-radius: 20px;
-  background-image: url(../images/switch.svg);
-}
-.dark .footer__icon-button {
-  background-image: url(../images/switchGrey.svg);
-}
-.footer__icon-moon {
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/night.svg);
-}
-.dark .footer__icon-moon {
-  background-image: url(../images/nightGrey.svg);
 }
 .footer__copyright {
   margin: 0;
@@ -1017,5 +999,49 @@
   }
   .dark .footer__logo {
     background: url(../images/logoFooterWhite.svg);
+  }
+}
+.switch {
+  display: flex;
+}
+.switch__icon-sun {
+  margin-right: 22px;
+  width: 28px;
+  height: 28px;
+  background-image: url(../images/day.svg);
+}
+.dark .switch__icon-sun {
+  background-image: url(../images/dayGrey.svg);
+}
+.switch__icon-button {
+  padding: 0;
+  border: none;
+  margin-right: 22px;
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background-image: url(../images/switch.svg);
+}
+.dark .switch__icon-button {
+  background-image: url(../images/switchGrey.svg);
+}
+.switch__icon-moon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/night.svg);
+}
+.dark .switch__icon-moon {
+  background-image: url(../images/nightGrey.svg);
+}
+
+.line {
+  display: none;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+
+@media (max-width: 600px) {
+  .line {
+    display: block;
   }
 }

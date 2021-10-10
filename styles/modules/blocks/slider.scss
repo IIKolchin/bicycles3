@@ -1,182 +1,197 @@
 .slider {
-    width: 100%;
+  width: 100%;
 
-    &__container_mobile {
-        display: none;
+  &__container_mobile {
+    display: none;
+  }
+
+  &__title {
+    margin: 60px 0 50px 120px;
+    @extend %title-style;
+  }
+
+  &__text {
+    margin: 0 0 80px 120px;
+    max-width: 460px;
+    @extend %text-style;
+
+    .dark & {
+      color: #e5e5e5;
+    }
+  }
+
+  &__pic {
+    display: flex;
+    overflow: hidden;
+    margin-left: 120px;
+  }
+
+  &__image {
+    vertical-align: top;
+    margin: 0 40px 50px 0;
+    width: 49.2%;
+
+    &-mobile {
+      vertical-align: top;
+      width: 88.75%;
+
+      margin: 0 18px 40px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin: 0 0 60px 120px;
+
+    &_mobile {
+      // border: none;
+      position: absolute;
+      top: 47px;
+      right: 18px;
+      z-index: 2;
+      border-radius: 20px;
+    }
+  }
+
+  &__button-prev {
+    padding: 0;
+    border: none;
+    background: url(../images/left.svg);
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.7s;
+
+    .dark & {
+      background: url(../images/leftGrey.svg);
+
+      &:hover {
+        opacity: 60%;
+      }
     }
 
-    &__title {
-        margin: 60px 0 50px 120px;
-        @extend %title-style;
+    &:hover {
+      opacity: 75%;
     }
 
-    &__text {
-        margin: 0 0 80px 120px;
-        max-width: 460px;
-        @extend %text-style;
+    &_mobile {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      border-radius: 20px;
 
-        .dark & {
-            color: #e5e5e5;
-        }
+      .dark & {
+        background: url(../images/leftGrey.svg);
+        background-size: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &__button-next {
+    border: none;
+    padding: 0;
+    background: url(../images/right.svg);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.7s;
+
+    .dark & {
+      background: url(../images/rightGrey.svg);
+
+      &:hover {
+        opacity: 60%;
+      }
     }
 
-    &__pic {
-        display: flex;
-        overflow: hidden;
-        margin-left: 120px;
+    &:hover {
+      opacity: 75%;
     }
 
-    &__image {
-        vertical-align: top;
-        margin: 0 40px 50px 0;
-        width: 49.2%;
+    &_mobile {
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      border-radius: 20px;
 
-        &_mobile {
-            vertical-align: top;
-            width: 88.75%;
-
-            margin: 0 18px 40px;
-        }
+      .dark & {
+        background: url(../images/rightGrey.svg);
+        background-size: cover;
+        border-radius: 20px;
+      }
     }
+  }
 
-    &__buttons {
-        display: flex;
-        margin: 0 0 60px 120px;
+  &__line {
+    display: none;
+  }
 
-        &_mobile {
-            position: absolute;
-            top: 47px;
-            right: 18px;
-            z-index: 2;
-            border-radius: 20px;
-        }
+  &__pagination .swiper-pagination-bullet {
+    background-color: $black;
+
+    .dark & {
+      background-color: $white;
     }
-
-    &__button-prev {
-        background: url(../images/left.svg);
-        margin-right: 20px;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        transition: 0.7s;
-
-        .dark & {
-            background: url(../images/leftGrey.svg);
-
-            &:hover {
-                opacity: 60%;
-            }
-        }
-
-        &:hover {
-            opacity: 75%;
-        }
-
-        &_mobile {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
-            background-size: cover;
-            border-radius: 20px;
-
-            .dark & {
-                background: url(../images/leftGrey.svg);
-                background-size: cover;
-                border-radius: 20px;
-            }
-        }
-    }
-
-    &__button-next {
-        background: url(../images/right.svg);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        transition: 0.7s;
-
-        .dark & {
-            background: url(../images/rightGrey.svg);
-
-            &:hover {
-                opacity: 60%;
-            }
-        }
-
-        &:hover {
-            opacity: 75%;
-        }
-
-        &_mobile {
-            width: 24px;
-            height: 24px;
-            background-size: cover;
-            border-radius: 20px;
-
-            .dark & {
-                background: url(../images/rightGrey.svg);
-                background-size: cover;
-                border-radius: 20px;
-            }
-        }
-    }
-
-    &__line {
-        width: 88.75%;
-        margin-left: 5.62%;
-        margin-bottom: 40px;
-    }
-
-    &__pagination .swiper-pagination-bullet {
-        background-color: $black;
-
-        .dark & {
-            background-color: $white;
-        }
-    }
+  }
 }
 
 @media (max-width: 1000px) {
-    .slider {
-        &__pic {
-            width: 150%;
-        }
-        &__image {
-            &:last-of-type {
-                display: none;
-            }
-        }
-
-        &__title,
-        &__text,
-        &__pic {
-            margin-left: 60px;
-        }
+  .slider {
+    &__pic {
+      width: 150%;
     }
+    &__image {
+      &:last-of-type {
+        display: none;
+      }
+    }
+
+    &__title,
+    &__text,
+    &__pic {
+      margin-left: 60px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .slider {
+    &__title {
+      font-size: 38px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
-    .slider {
-        padding-top: 40px;
+  .slider {
+    padding-top: 40px;
 
-        &__container {
-            display: none;
-        }
-
-        &__container_mobile {
-            display: block;
-            position: relative;
-        }
-
-        &__title {
-            &_mobile {
-                margin: 0 0 40px 18px;
-            }
-        }
-
-        &__text {
-            &_mobile {
-                margin: 0 18px 40px;
-            }
-        }
+    &__container {
+      display: none;
     }
+
+    &__container_mobile {
+      display: block;
+      position: relative;
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-top: 0;
+      margin-left: 18px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      margin: 0 18px 40px;
+    }
+
+    &__line {
+      width: 88.75%;
+      margin: 0 5.62% 40px;
+    }
+  }
 }

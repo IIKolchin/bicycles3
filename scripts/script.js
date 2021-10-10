@@ -56,11 +56,13 @@ function closeMenu() {
   document
     .querySelector(".header_mobile")
     .classList.remove("header_mobile-off");
+  document.body.style.position = "";
 }
 
 function openMenu() {
   document.querySelector(".header_mobile").classList.add("header_mobile-off");
   document.querySelector(".header_menu").classList.add("header_menu-on");
+  document.body.style.position = "fixed";
 }
 
 function dark() {

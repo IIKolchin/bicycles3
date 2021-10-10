@@ -1,192 +1,155 @@
 .footer {
-    box-sizing: border-box;
-    padding: 80px 120px 60px;
-    background: #efefef;
+  box-sizing: border-box;
+  padding: 80px 120px 60px;
+  background: #efefef;
+
+  .dark & {
+    background: #2f2f2f;
+  }
+
+  &__title {
+    width: 230px;
+    margin: 0 0 50px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 116%;
+    color: #cfcfcf;
 
     .dark & {
-        background: #2f2f2f;
+      color: #565656;
+    }
+  }
+
+  &__form {
+    margin-bottom: 92px;
+  }
+
+  &__input-container {
+    position: relative;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 360px;
+    height: 50px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    color: #222222;
+    opacity: 70%;
+
+    border-color: rgba(199, 199, 199, 0.5);
+    background-color: #efefef;
+
+    &:hover {
+      color: $black;
+      opacity: 1;
+      cursor: pointer;
     }
 
-    &__title {
-        width: 230px;
-        margin: 0 0 50px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
+    .dark & {
+      background: #2f2f2f;
+      color: $white;
+      opacity: 70%;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__input-button {
+    visibility: hidden;
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    top: 12px;
+    left: 330px;
+
+    &-on {
+      visibility: visible;
     }
 
-    &__group {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-
-        &_mobile {
-            display: none;
-        }
+    .dark & {
+      color: $white;
     }
-
-    &__switch {
-        display: flex;
-    }
-
-    &__icon-sun {
-        margin-right: 22px;
-        width: 28px;
-        height: 28px;
-        background-image: url(../images/day.svg);
-
-        .dark & {
-            background-image: url(../images/dayGrey.svg);
-        }
-    }
-
-    &__icon-button {
-        margin-right: 22px;
-        width: 44px;
-        height: 24px;
-        border-radius: 20px;
-        background-image: url(../images/switch.svg);
-
-        .dark & {
-            background-image: url(../images/switchGrey.svg);
-        }
-    }
-
-    &__icon-moon {
-        width: 20px;
-        height: 20px;
-        background-image: url(../images/night.svg);
-
-        .dark & {
-            background-image: url(../images/nightGrey.svg);
-        }
-    }
-
-    &__copyright {
-        margin: 0;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 116%;
-        color: #cfcfcf;
-
-        .dark & {
-            color: #565656;
-        }
-    }
-
-    &__form {
-        margin-bottom: 92px;
-    }
-
-    &__input-container {
-        position: relative;
-        border: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    &__input {
-        box-sizing: border-box;
-        width: 360px;
-        height: 50px;
-        border-radius: 4px;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 28px;
-        color: #222222;
-        opacity: 70%;
-
-        border-color: rgba(199, 199, 199, 0.5);
-        background-color: #efefef;
-
-        &:hover {
-            color: $black;
-            opacity: 1;
-            cursor: pointer;
-        }
-
-        .dark & {
-            background: #2f2f2f;
-            color: $white;
-            opacity: 70%;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__input-button {
-        visibility: hidden;
-        position: absolute;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 28px;
-        top: 12px;
-        left: 330px;
-
-        &-on {
-            visibility: visible;
-        }
-
-        .dark & {
-            color: $white;
-        }
-    }
+  }
 }
 
 @media (max-width: 600px) {
-    .footer {
-        padding: 60px 5.62% 0;
+  .footer {
+    padding: 60px 5.62% 0;
 
-        &__group {
-            display: none;
+    &__group {
+      display: none;
 
-            &_mobile {
-                display: flex;
-                box-sizing: border-box;
-                align-items: center;
-                padding-bottom: 16px;
-            }
-        }
-
-        &__form {
-            margin-bottom: 90px;
-        }
-
-        &__title {
-            margin-bottom: 40px;
-        }
-
-        &__input {
-            width: 284px;
-        }
-
-        &__input-button {
-            top: 0;
-            left: 255px;
-            height: 50px;
-        }
-
-        &__copyright {
-            margin-bottom: 0;
-        }
-
-        &__logo {
-            background: url(../images/logoFooterBlack.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-bottom: 0;
-            width: 38px;
-            height: 38px;
-
-            .dark & {
-                background: url(../images/logoFooterWhite.svg);
-            }
-        }
+      &_mobile {
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        padding-bottom: 16px;
+      }
     }
+
+    &__form {
+      margin-bottom: 90px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__input {
+      width: 284px;
+    }
+
+    &__input-button {
+      top: 0;
+      left: 255px;
+      height: 50px;
+    }
+
+    &__copyright {
+      margin-bottom: 0;
+    }
+
+    &__logo {
+      background: url(../images/logoFooterBlack.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 0;
+      width: 38px;
+      height: 38px;
+
+      .dark & {
+        background: url(../images/logoFooterWhite.svg);
+      }
+    }
+  }
 }
