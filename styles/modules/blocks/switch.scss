@@ -1,0 +1,38 @@
+.switch {
+  display: flex;
+
+  &__icon-sun {
+    margin-right: 22px;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/day.svg);
+
+    .dark & {
+      background-image: url(../images/dayGrey.svg);
+    }
+  }
+
+  &__icon-button {
+    padding: 0;
+    border: none;
+    margin-right: 22px;
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    background-image: url(../images/switch.svg);
+
+    .dark & {
+      background-image: url(../images/switchGrey.svg);
+    }
+  }
+
+  &__icon-moon {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/night.svg);
+
+    .dark & {
+      background-image: url(../images/nightGrey.svg);
+    }
+  }
+}

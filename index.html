@@ -70,10 +70,10 @@
             </li>
           </ul>
         </nav>
-        <div class="footer__switch header__switch">
-          <div class="footer__icon-sun header__switch-sun"></div>
-          <div class="footer__icon-button header__switch-button"></div>
-          <div class="footer__icon-moon header__switch-moon"></div>
+        <div class="switch header__switch">
+          <div class="switch__icon-sun header__switch-sun"></div>
+          <button class="switch__icon-button header__switch-button"></button>
+          <div class="switch__icon-moon header__switch-moon"></div>
         </div>
       </div>
     </header>
@@ -110,12 +110,10 @@
 
         <!-- Мобильная версия триатлон -->
 
-        <div class="triathlon_mobile">
-          <h2 class="triathlon__title triathlon__title_mobile">
-            Шоссе, ТТ и&nbsp;Грэвел
-          </h2>
+        <div class="triathlon triathlon_mobile">
+          <h2 class="triathlon__title title-mobile">Шоссе, ТТ и&nbsp;Грэвел</h2>
           <img
-            class="triathlon__image_mobile"
+            class="triathlon__image-mobile"
             src="./images/Firstpic.png"
             alt="Велосипедист на грунтовой дороге в лесу в горах."
           />
@@ -127,7 +125,7 @@
             />
           </div>
 
-          <p class="triathlon__text triathlon__text_mobile">
+          <p class="triathlon__text text-mobile">
             Триатлонные старты, горные серпантины или грейвел заезды по
             живописным маршрутам – нужно только определиться с выбором
             велосипеда и отправиться в путь.
@@ -142,7 +140,7 @@
       <!-- Секция Меркс -->
 
       <section class="merks">
-        <div class="merks__line-mobile"></div>
+        <div class="line merks__line"></div>
 
         <img
           class="merks__image"
@@ -228,86 +226,62 @@
             </div>
           </div>
           <div class="slider__buttons">
-            <div class="slider__button-prev"></div>
-            <div class="slider__button-next"></div>
+            <button class="slider__button-prev"></button>
+            <button class="slider__button-next"></button>
           </div>
         </div>
 
         <!-- Мобильная версия слайдер -->
 
-        <div class="slider__container_mobile swiper" id="slider-mobile">
-          <div class="merks__line-mobile slider__line"></div>
+        <div
+          class="slider__container slider__container_mobile swiper"
+          id="slider-mobile"
+        >
+          <div class="line slider__line"></div>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <h2
-                class="
-                  slider__title slider__title_mobile
-                  triathlon__title_mobile
-                "
-              >
-                Шоссе
-              </h2>
+              <h2 class="slider__title title-mobile">Шоссе</h2>
 
-              <div class="slider__pic_mobile">
+              <div class="slider__pic-mobile">
                 <img
-                  class="slider__image_mobile"
+                  class="slider__image-mobile"
                   src="./images/Highway~.png"
                   alt="Серпантин в горах."
                 />
               </div>
-              <p
-                class="slider__text slider__text_mobile triathlon__text_mobile"
-              >
+              <p class="slider__text text-mobile">
                 На шоссейном велосипеде можно ездить по асфальту на разных
                 градиентах: будь то горы или равнины. Гонки проходят в командном
                 пелотоне, но тренироваться можно и самостоятельно.
               </p>
             </div>
             <div class="swiper-slide">
-              <h2
-                class="
-                  slider__title slider__title_mobile
-                  triathlon__title_mobile
-                "
-              >
-                Грэвел
-              </h2>
+              <h2 class="slider__title title-mobile">Грэвел</h2>
 
-              <div class="slider__pic_mobile">
+              <div class="slider__pic-mobile">
                 <img
-                  class="slider__image_mobile"
+                  class="slider__image-mobile"
                   src="./images/Grevel~.png"
                   alt="Грунтовая лесная дорога."
                 />
               </div>
-              <p
-                class="slider__text slider__text_mobile triathlon__text_mobile"
-              >
+              <p class="slider__text text-mobile">
                 Грэвел похож на шоссейный велосипед, но конструкция рамы немного
                 отличается, и на нём стоят более широкие покрышки, всё для того
                 чтобы проехать по лёгкому бездорожью.
               </p>
             </div>
             <div class="swiper-slide">
-              <h2
-                class="
-                  slider__title slider__title_mobile
-                  triathlon__title_mobile
-                "
-              >
-                TT
-              </h2>
+              <h2 class="slider__title title-mobile">TT</h2>
 
-              <div class="slider__pic_mobile">
+              <div class="slider__pic-mobile">
                 <img
-                  class="slider__image_mobile"
+                  class="slider__image-mobile"
                   src="./images/TT~.png"
                   alt="Асфальтированная дорога на равнинной местности."
                 />
               </div>
-              <p
-                class="slider__text slider__text_mobile triathlon__text_mobile"
-              >
+              <p class="slider__text text-mobile">
                 ТТ — это велосипед для триатлона или раздельного старта, гооняют
                 на таком велике только по равнинному асфальту, велик очень
                 быстрые и аэродинамичный.
@@ -486,12 +460,10 @@
 
         <!-- Мобильная версия велосипеды -->
 
-        <div class="merks__line-mobile bicycle__line" id="bicycle-mobile"></div>
+        <div class="line bicycle__line" id="bicycle-mobile"></div>
 
         <div class="bicycle-mobile">
-          <h2 class="bicycle__title-mobile triathlon__title_mobile">
-            Велосипеды
-          </h2>
+          <h2 class="bicycle__title-mobile title-mobile">Велосипеды</h2>
           <select class="bicycle__buttons-mobile">
             <option
               class="
@@ -774,19 +746,15 @@
           alt="Деревья по обеим сторонам закругляющийся дороги."
         />
 
-        <div class="workout__line-mobile merks__line-mobile"></div>
-        <h2
-          class="workout__title workout__title_mobile triathlon__title_mobile"
-        >
-          Тренировки
-        </h2>
+        <div class="workout__line line"></div>
+        <h2 class="workout__title title-mobile">Тренировки</h2>
 
         <img
           class="workout__image workout__image_mobile"
           src="./images/Training.png"
           alt="Деревья по обеим сторонам закругляющийся дороги."
         />
-        <p class="workout__text workout__text_mobile triathlon__text_mobile">
+        <p class="workout__text text-mobile">
           Чтобы найти маршрут для тренировки можно воспользоваться сервисом
           Komoot, а записать эти тренировки поможет приложение Strava, а также
           это приложение позволит построить тренировочный план.
@@ -822,10 +790,16 @@
       </form>
       <div class="footer__group">
         <p class="footer__copyright">&copy; Road Club 2021</p>
-        <div class="footer__switch">
-          <div class="footer__icon-sun"></div>
-          <div class="footer__icon-button footer__switch-button"></div>
-          <div class="footer__icon-moon"></div>
+        <div class="footer__switch switch">
+          <div class="footer__icon-sun switch__icon-sun"></div>
+          <button
+            class="
+              footer__icon-button
+              switch__icon-button
+              footer__switch-button
+            "
+          ></button>
+          <div class="footer__icon-moon switch__icon-moon"></div>
         </div>
       </div>
 
