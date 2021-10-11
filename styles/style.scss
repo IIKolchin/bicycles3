@@ -1,6 +1,7 @@
 @import "../vendor/normalize.css";
 @import "../vendor/fonts/fonts.css";
 @import "../styles/modules/variables.scss";
+@import "../styles/modules/mixins.scss";
 @import "../styles/modules/blocks/page.scss";
 @import "../styles/modules/blocks/header.scss";
 @import "../styles/modules/blocks/triathlon.scss";
@@ -14,3 +15,4 @@
 @import "../styles/modules/blocks/line.scss";
 @import "../styles/modules/blocks/title-mobile.scss";
 @import "../styles/modules/blocks/text-mobile.scss";
+@import "../styles/modules/blocks/bicycle-mobile.scss";

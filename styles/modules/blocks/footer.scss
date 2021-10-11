@@ -83,8 +83,7 @@
     visibility: hidden;
     position: absolute;
     background: none;
-    border: none;
-    padding: 0;
+    @include resetStyle;
     cursor: pointer;
     font-weight: 500;
     font-size: 13px;

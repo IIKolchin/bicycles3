@@ -2,15 +2,14 @@
   display: flex;
   justify-content: space-between;
 
-  &-mobile {
-    display: none;
-  }
-
   &__buttons {
     display: flex;
   }
 
   &__button {
+    border: none;
+    background: $background;
+    padding: 0;
     margin: 92px 40px 120px 0;
     cursor: pointer;
     @extend %text-style;
@@ -19,6 +18,7 @@
     .dark & {
       color: #e5e5e5;
       transition: 0.5s;
+      background: $gray;
 
       &:hover {
         opacity: 50%;
@@ -49,71 +49,6 @@
     height: 60px;
     margin: 60px 0 120px 0;
     @extend %title-style;
-
-    &-mobile {
-      margin: 40px 0;
-    }
-  }
-
-  &__pic {
-    margin: 0;
-    display: flex;
-  }
-
-  &__image {
-    border-radius: 20px;
-
-    min-width: 40%;
-
-    &-mobile {
-      width: 89.4%;
-      margin: 35px 15px 3px;
-    }
-  }
-
-  &__group {
-    margin: 0 30px 0 0;
-    width: 31.66%;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-
-  &__name {
-    margin: 22px 0 60px 0;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-
-    .dark & {
-      color: $white;
-    }
-
-    &-mobile {
-      text-align: center;
-      margin: 0 72px 36px;
-      font-size: 14px;
-      line-height: 18px;
-
-      .dark & {
-        color: $white;
-      }
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $black;
-
-    &-mobile {
-      text-decoration: none;
-      color: $black;
-    }
-  }
-
-  &__line {
-    margin-bottom: 40px;
   }
 }
 
@@ -121,12 +56,6 @@
   .bicycle {
     &__title {
       font-size: 46px;
-    }
-    &__group {
-      max-width: 80%;
-    }
-    &__image {
-      max-width: 80%;
     }
   }
 }
@@ -142,29 +71,5 @@
 @media (max-width: 600px) {
   .bicycle {
     display: none;
-
-    &-mobile {
-      display: block;
-    }
-
-    .dark &__button_mobile {
-      color: $white;
-    }
-
-    &__buttons-mobile {
-      width: 114px;
-      height: 30px;
-      background: $background;
-      font-weight: 600;
-      font-size: 11px;
-      line-height: 14px;
-      border-radius: 2px;
-      border-color: #e3e3e3;
-
-      .dark & {
-        background: #333333;
-        color: $white;
-      }
-    }
   }
 }

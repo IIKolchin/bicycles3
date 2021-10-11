@@ -80,10 +80,10 @@
 }
 .header__ref {
   text-decoration: none;
+  color: #151515;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  color: #151515;
   transition: 0.5s;
 }
 .dark .header__ref {
@@ -104,9 +104,12 @@
 .header__button_mobile {
   width: 22px;
   height: 19px;
-  padding: 0;
   border: none;
+  padding: 0;
   margin: 28px 5.6% 27px 87.5%;
+}
+.dark .header__button_mobile {
+  background: #333333;
 }
 .header__line {
   display: block;
@@ -145,8 +148,13 @@
   background-position: center;
 }
 .header__switch {
+  position: fixed;
+  bottom: 38px;
+  left: 0;
+  right: 0;
   justify-content: center;
-  margin: 62vh 28.75% 38px;
+  align-items: center;
+  margin: 0 28.75% 0;
 }
 
 @media (max-width: 600px) {
@@ -305,7 +313,6 @@
   }
   .triathlon__title {
     max-width: 240px;
-    font-size: 38px;
   }
   .triathlon__text {
     width: 80%;
@@ -403,7 +410,12 @@
   color: #e5e5e5;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
+  .merks__image {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 1150px) {
   .merks__image {
     width: 50%;
   }
@@ -415,7 +427,12 @@
     margin-top: 100px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .merks__title {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 715px) {
   .merks {
     display: block;
     padding: 40px 5.62%;
@@ -490,8 +507,8 @@
   border-radius: 20px;
 }
 .slider__button-prev {
-  padding: 0;
   border: none;
+  padding: 0;
   background: url(../images/left.svg);
   margin-right: 20px;
   width: 50px;
@@ -552,12 +569,6 @@
 .slider__line {
   display: none;
 }
-.slider__pagination .swiper-pagination-bullet {
-  background-color: #151515;
-}
-.dark .slider__pagination .swiper-pagination-bullet {
-  background-color: #fff;
-}
 
 @media (max-width: 1000px) {
   .slider__pic {
@@ -604,13 +615,13 @@
   display: flex;
   justify-content: space-between;
 }
-.bicycle-mobile {
-  display: none;
-}
 .bicycle__buttons {
   display: flex;
 }
 .bicycle__button {
+  border: none;
+  background: #f4f4f4;
+  padding: 0;
   margin: 92px 40px 120px 0;
   cursor: pointer;
   transition: 0.5s;
@@ -618,6 +629,7 @@
 .dark .bicycle__button {
   color: #e5e5e5;
   transition: 0.5s;
+  background: #333333;
 }
 .dark .bicycle__button:hover {
   opacity: 50%;
@@ -641,67 +653,10 @@
   height: 60px;
   margin: 60px 0 120px 0;
 }
-.bicycle__title-mobile {
-  margin: 40px 0;
-}
-.bicycle__pic {
-  margin: 0;
-  display: flex;
-}
-.bicycle__image {
-  border-radius: 20px;
-  min-width: 40%;
-}
-.bicycle__image-mobile {
-  width: 89.4%;
-  margin: 35px 15px 3px;
-}
-.bicycle__group {
-  margin: 0 30px 0 0;
-  width: 31.66%;
-}
-.bicycle__group:last-of-type {
-  margin-right: 0;
-}
-.bicycle__name {
-  margin: 22px 0 60px 0;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-.dark .bicycle__name {
-  color: #fff;
-}
-.bicycle__name-mobile {
-  text-align: center;
-  margin: 0 72px 36px;
-  font-size: 14px;
-  line-height: 18px;
-}
-.dark .bicycle__name-mobile {
-  color: #fff;
-}
-.bicycle__link {
-  text-decoration: none;
-  color: #151515;
-}
-.bicycle__link-mobile {
-  text-decoration: none;
-  color: #151515;
-}
-.bicycle__line {
-  margin-bottom: 40px;
-}
 
 @media (max-width: 1380px) {
   .bicycle__title {
     font-size: 46px;
-  }
-  .bicycle__group {
-    max-width: 80%;
-  }
-  .bicycle__image {
-    max-width: 80%;
   }
 }
 @media (max-width: 750px) {
@@ -713,26 +668,6 @@
   .bicycle {
     display: none;
   }
-  .bicycle-mobile {
-    display: block;
-  }
-  .dark .bicycle__button_mobile {
-    color: #fff;
-  }
-  .bicycle__buttons-mobile {
-    width: 114px;
-    height: 30px;
-    background: #f4f4f4;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 14px;
-    border-radius: 2px;
-    border-color: #e3e3e3;
-  }
-  .dark .bicycle__buttons-mobile {
-    background: #333333;
-    color: #fff;
-  }
 }
 .bicycles {
   margin: 0 8.33%;
@@ -743,7 +678,72 @@
 .bicycles__slider-mobile {
   display: none;
 }
+.bicycles__pic {
+  margin: 0;
+  display: flex;
+}
+.bicycles__image {
+  border-radius: 20px;
+  min-width: 40%;
+}
+.bicycles__image-mobile {
+  width: 89.4%;
+  margin: 35px 15px 3px;
+}
+.bicycles__group {
+  margin: 0 30px 0 0;
+  width: 31.66%;
+}
+.bicycles__group:last-of-type {
+  margin-right: 0;
+}
+.bicycles__name {
+  margin: 22px 0 60px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.dark .bicycles__name {
+  color: #fff;
+}
+.bicycles__name-mobile {
+  text-align: center;
+  margin: 0 72px 36px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.dark .bicycles__name-mobile {
+  color: #fff;
+}
+.bicycles__link {
+  text-decoration: none;
+  color: #151515;
+}
+.bicycles__link-mobile {
+  text-decoration: none;
+  color: #151515;
+}
+.bicycles__line {
+  margin-bottom: 40px;
+}
+.bicycles__pagination .swiper-pagination-bullet {
+  background-color: #151515;
+  width: 4px;
+  height: 4px;
+}
+.dark .bicycles__pagination .swiper-pagination-bullet {
+  background-color: #fff;
+}
 
+@media (max-width: 1380px) {
+  .bicycles__group {
+    max-width: 80%;
+  }
+  .bicycles__image {
+    max-width: 80%;
+  }
+}
 @media (max-width: 600px) {
   .bicycles {
     padding: 40px 0 22px;
@@ -812,9 +812,9 @@
     padding: 120px 80px 100px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .workout {
-    padding: 100px 60px 80px;
+    padding: 100px 60px 60px;
   }
   .workout__text {
     margin-bottom: 50px;
@@ -825,7 +825,7 @@
     font-size: 46px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .workout {
     display: block;
     padding: 40px 5.62% 60px;
@@ -838,6 +838,11 @@
   }
   .workout__image_mobile {
     display: block;
+  }
+  .workout__text {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 28px;
   }
   .workout__text_mobile {
     display: block;
@@ -861,7 +866,6 @@
   .workout__text {
     font-size: 12px;
     line-height: 18px;
-    margin-top: 40px;
     margin-bottom: 40px;
     margin-right: 0;
   }
@@ -1014,8 +1018,8 @@
   background-image: url(../images/dayGrey.svg);
 }
 .switch__icon-button {
-  padding: 0;
   border: none;
+  padding: 0;
   margin-right: 22px;
   width: 44px;
   height: 24px;
@@ -1043,5 +1047,52 @@
 @media (max-width: 600px) {
   .line {
     display: block;
+  }
+}
+.title-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .title-mobile {
+    display: block;
+  }
+}
+.text-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .text-mobile {
+    display: block;
+  }
+}
+.bicycle-mobile {
+  display: none;
+}
+.bicycle-mobile__title {
+  margin: 40px 0;
+}
+
+@media (max-width: 600px) {
+  .bicycle-mobile {
+    display: block;
+  }
+  .dark .bicycle-mobile__button {
+    color: #fff;
+  }
+  .bicycle-mobile__buttons {
+    width: 114px;
+    height: 30px;
+    background: #f4f4f4;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    border-radius: 2px;
+    border-color: #e3e3e3;
+  }
+  .dark .bicycle-mobile__buttons {
+    background: #333333;
+    color: #fff;
   }
 }

@@ -1,8 +1,8 @@
-const buttonHighway = document.querySelector(".bicycle__button-highway");
-const buttonGrevel = document.querySelector(".bicycle__button-grevel");
-const buttonTt = document.querySelector(".bicycle__button-tt");
+const buttonHighway = document.querySelector(".bicycle__button_highway");
+const buttonGrevel = document.querySelector(".bicycle__button_grevel");
+const buttonTt = document.querySelector(".bicycle__button_tt");
 const switchButtonFooter = document.querySelector(".footer__switch-button");
-const select = document.querySelector(".bicycle__buttons-mobile");
+const select = document.querySelector(".bicycle-mobile__buttons");
 const switchButtonHeader = document.querySelector(".header__switch-button");
 const input = document.querySelector(".footer__input");
 const inputButton = document.querySelector(".footer__input-button");
@@ -32,21 +32,21 @@ new Swiper(".slider__container_mobile", {
 
 const swiperInHighway = new Swiper(".slider-highway", {
   pagination: {
-    el: ".slider__pagination-highway",
+    el: ".bicycles__pagination_highway",
     clickable: true,
   },
 });
 
 const swiperInGrevel = new Swiper(".slider-grevel", {
   pagination: {
-    el: ".slider__pagination-grevel",
+    el: ".bicycles__pagination_grevel",
     clickable: true,
   },
 });
 
 const swiperInTt = new Swiper(".slider-tt", {
   pagination: {
-    el: ".slider__pagination-tt",
+    el: ".bicycles__pagination_tt",
     clickable: true,
   },
 });

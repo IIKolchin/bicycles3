@@ -23,8 +23,7 @@
   }
 
   &__link {
-    text-decoration: none;
-    color: #151515;
+    @include resetLink;
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
@@ -69,9 +68,9 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .workout {
-    padding: 100px 60px 80px;
+    padding: 100px 60px 60px;
     &__text {
       margin-bottom: 50px;
       margin-right: 5%;
@@ -84,7 +83,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .workout {
     display: block;
     padding: 40px 5.62% 60px;
@@ -101,11 +100,17 @@
       display: block;
     }
 
-    &__text_mobile {
-      display: block;
-      font-weight: 400;
+    &__text {
+      margin-top: 40px;
       font-size: 18px;
       line-height: 28px;
+
+      &_mobile {
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
 
     &__links_mobile {
@@ -131,7 +136,7 @@
     &__text {
       font-size: 12px;
       line-height: 18px;
-      margin-top: 40px;
+
       margin-bottom: 40px;
       margin-right: 0;
     }
