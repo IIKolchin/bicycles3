@@ -13,8 +13,7 @@
   }
 
   &__icon-button {
-    padding: 0;
-    border: none;
+    @include resetStyle;
     margin-right: 22px;
     width: 44px;
     height: 24px;

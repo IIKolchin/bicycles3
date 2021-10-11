@@ -20,7 +20,7 @@
   }
   &__link {
     box-sizing: border-box;
-    list-style: none;
+    @include listStyle;
     padding: 28px 34px 28px 0;
 
     &:last-of-type {
@@ -38,11 +38,11 @@
   }
 
   &__ref {
-    text-decoration: none;
+    @include resetLink;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    color: $black;
+
     transition: 0.5s;
 
     .dark & {
@@ -69,9 +69,12 @@
   &__button_mobile {
     width: 22px;
     height: 19px;
-    padding: 0;
-    border: none;
+    @include resetStyle;
     margin: 28px 5.6% 27px 87.5%;
+
+    .dark & {
+      background: $gray;
+    }
   }
 
   &__line {
@@ -86,7 +89,7 @@
     }
 
     .dark & {
-      background: #fff;
+      background: $white;
     }
   }
 
@@ -104,8 +107,9 @@
 
   &__close {
     background: none;
-    border: none;
-    padding: 0;
+
+    @include resetStyle;
+
     margin: 26px 6.25% 100px 88.1%;
     width: 22px;
     height: 22px;
@@ -119,8 +123,13 @@
   }
 
   &__switch {
+    position: fixed;
+    bottom: 38px;
+    left: 0;
+    right: 0;
     justify-content: center;
-    margin: 62vh 28.75% 38px;
+    align-items: center;
+    margin: 0 28.75% 0;
   }
 }
 

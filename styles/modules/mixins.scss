@@ -1,0 +1,13 @@
+@mixin resetStyle {
+  border: none;
+  padding: 0;
+}
+
+@mixin listStyle {
+  list-style: none;
+}
+
+@mixin resetLink {
+  text-decoration: none;
+  color: $black;
+}

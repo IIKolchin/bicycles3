@@ -1,3 +1,10 @@
 .title-mobile {
+  display: none;
   @extend %title-mobile;
+}
+
+@media (max-width: 900px) {
+  .title-mobile {
+    display: block;
+  }
 }
