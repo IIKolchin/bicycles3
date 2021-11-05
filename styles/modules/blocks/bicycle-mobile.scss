@@ -1,0 +1,33 @@
+.bicycle-mobile {
+  display: none;
+
+  &__title {
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .bicycle-mobile {
+    display: block;
+
+    .dark &__button {
+      color: $white;
+    }
+
+    &__buttons {
+      width: 114px;
+      height: 30px;
+      background: $background;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 14px;
+      border-radius: 2px;
+      border-color: #e3e3e3;
+
+      .dark & {
+        background: #333333;
+        color: $white;
+      }
+    }
+  }
+}

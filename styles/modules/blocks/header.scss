@@ -1,0 +1,163 @@
+.header {
+  box-sizing: border-box;
+  min-height: 74px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  z-index: 10;
+
+  .dark & {
+    background-color: $gray;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  &__link {
+    box-sizing: border-box;
+    @include listStyle;
+    padding: 28px 34px 28px 0;
+
+    &:last-of-type {
+      padding-right: 120px;
+    }
+
+    &_mobile {
+      padding: 0 0 32px 0;
+      text-align: center;
+      &:last-of-type {
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__ref {
+    @include resetLink;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    transition: 0.5s;
+
+    .dark & {
+      color: $white;
+
+      &:hover {
+        opacity: 65%;
+      }
+    }
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    &_mobile {
+      padding: 0;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &__button_mobile {
+    width: 22px;
+    height: 19px;
+    @include resetStyle;
+    margin: 28px 5.6% 27px 87.5%;
+
+    .dark & {
+      background: $gray;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: $black;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .dark & {
+      background: $white;
+    }
+  }
+
+  &_mobile {
+    display: none;
+  }
+
+  &_menu {
+    display: none;
+  }
+
+  &_menu-on {
+    display: block;
+  }
+
+  &__close {
+    background: none;
+
+    @include resetStyle;
+
+    margin: 26px 6.25% 100px 88.1%;
+    width: 22px;
+    height: 22px;
+    background: url(../images/close.svg);
+    background-position: center;
+
+    .dark & {
+      background: url(../images/closeWhite.svg);
+      background-position: center;
+    }
+  }
+
+  &__switch {
+    position: fixed;
+    bottom: 38px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 28.75% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__links {
+      display: none;
+    }
+
+    &_mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      display: block;
+    }
+
+    &__links_mobile {
+      display: block;
+    }
+
+    &_mobile-off {
+      display: none;
+    }
+
+    &_menu {
+      position: relative;
+      height: 100vh;
+    }
+  }
+}

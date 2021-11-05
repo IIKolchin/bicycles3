@@ -1,0 +1,75 @@
+.bicycle {
+  display: flex;
+  justify-content: space-between;
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    border: none;
+    background: $background;
+    padding: 0;
+    margin: 92px 40px 120px 0;
+    cursor: pointer;
+    @extend %text-style;
+    transition: 0.5s;
+
+    .dark & {
+      color: #e5e5e5;
+      transition: 0.5s;
+      background: $gray;
+
+      &:hover {
+        opacity: 50%;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &-active {
+      color: #151515;
+      font-weight: 600;
+      opacity: 1;
+
+      .dark & {
+        color: $white;
+      }
+    }
+  }
+
+  &__title {
+    padding: 0;
+    height: 60px;
+    margin: 60px 0 120px 0;
+    @extend %title-style;
+  }
+}
+
+@media (max-width: 1380px) {
+  .bicycle {
+    &__title {
+      font-size: 46px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .bicycle {
+    &__title {
+      font-size: 38px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .bicycle {
+    display: none;
+  }
+}

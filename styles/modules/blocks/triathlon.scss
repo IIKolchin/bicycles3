@@ -1,0 +1,241 @@
+.triathlon {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8.33%;
+  margin-top: 74px;
+
+  &__title {
+    margin-top: 80px;
+    max-width: 460px;
+    @extend %title-style;
+  }
+
+  &__text {
+    margin: 50px 0;
+    max-width: 460px;
+    @extend %text-style;
+
+    .dark & {
+      color: #e5e5e5;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 106.24%;
+    text-decoration: none;
+    width: 180px;
+    border-radius: 4px;
+    color: $white;
+    background: linear-gradient(to left, $green 50%, #319e75 50%) right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+
+    &:hover {
+      background-position: left;
+    }
+
+    &_mobile {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    vertical-align: top;
+    margin-top: 20px;
+
+    width: 46.2%;
+
+    &-mobile {
+      vertical-align: top;
+      width: 89.4%;
+      margin-left: 30px;
+    }
+  }
+
+  &__bike {
+    position: relative;
+    display: flex;
+    margin-top: 167px;
+  }
+
+  &__bike-name {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__bike-line {
+    width: 132px;
+    height: 2px;
+    background-color: $grayLight;
+    margin: 10px 154px 0 30px;
+
+    .dark & {
+      background-color: #707070;
+    }
+  }
+
+  &__bike-hallway {
+    position: absolute;
+    top: -270px;
+    left: 510px;
+    width: 440px;
+    height: 430px;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__bike-image {
+    border-radius: 20px;
+    position: sticky;
+    top: 30px;
+    left: 630px;
+
+    &_mobile {
+      border-radius: 20px;
+      position: sticky;
+      width: 234px;
+    }
+  }
+
+  &_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .triathlon {
+    &__bike-hallway {
+      top: -250px;
+      left: 350px;
+      width: 300px;
+    }
+    &__bike-image {
+      width: 300px;
+    }
+
+    &__title {
+      max-width: 340px;
+      font-size: 46px;
+    }
+
+    &__text {
+      width: 340px;
+      font-size: 16px;
+    }
+
+    &__bike-line {
+      margin-right: 0;
+    }
+
+    &__image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__bike {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .triathlon {
+    padding-left: 5%;
+    &__bike-hallway {
+      width: 250px;
+    }
+    &__bike-image {
+      width: 250px;
+    }
+
+    &__title {
+      max-width: 240px;
+    }
+
+    &__text {
+      width: 80%;
+      font-size: 16px;
+    }
+
+    &__image {
+      width: 400px;
+      height: 548px;
+    }
+
+    &__bike-line {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .triathlon {
+    margin-top: 74px;
+    padding-left: 0;
+
+    &__group,
+    &__image {
+      display: none;
+    }
+
+    &__title {
+      margin-left: 30px;
+      margin-top: 0;
+    }
+
+    &_mobile {
+      margin-top: 0;
+      display: block;
+      position: relative;
+      padding: 40px 5.62%;
+    }
+
+    &__bike-hallway {
+      display: none;
+
+      &_mobile {
+        display: block;
+        position: absolute;
+        top: 240px;
+        left: 18px;
+        width: 234px;
+        height: 200px;
+      }
+    }
+
+    &__text {
+      width: 100%;
+
+      &_mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .triathlon {
+    &__text {
+      font-size: 12px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin: 0 0 40px;
+      min-width: 284px;
+      font-size: 32px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.page {
+  box-sizing: border-box;
+  font-family: "inter", Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 1440px;
+  background: $background;
+  color: $black;
+
+  .dark & {
+    background: $gray;
+    color: $white;
+  }
+}

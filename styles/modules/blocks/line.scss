@@ -1,0 +1,11 @@
+.line {
+  display: none;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+
+@media (max-width: 600px) {
+  .line {
+    display: block;
+  }
+}

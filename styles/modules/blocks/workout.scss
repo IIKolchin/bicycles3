@@ -1,0 +1,150 @@
+.workout {
+  display: flex;
+  padding: 150px 120px 120px;
+
+  &__title {
+    margin: 0 0 50px 0;
+    @extend %title-style;
+  }
+
+  &__text {
+    @extend %text-style;
+    margin: 0 25.8% 182px 0;
+
+    .dark & {
+      color: #e5e5e5;
+    }
+
+    &_mobile {
+      display: none;
+      margin: 40px 0;
+      @extend %title-mobile;
+    }
+  }
+
+  &__link {
+    @include resetLink;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer;
+    transition: 0.7s;
+
+    .dark & {
+      color: $white;
+
+      &:hover {
+        opacity: 65%;
+      }
+    }
+
+    &:hover {
+      opacity: 75%;
+    }
+
+    &:first-of-type {
+      margin-right: 30px;
+    }
+
+    &_mobile {
+      display: none;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__image {
+    width: 48.3%;
+    &_mobile {
+      display: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .workout {
+    padding: 120px 80px 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .workout {
+    padding: 100px 60px 60px;
+    &__text {
+      margin-bottom: 50px;
+      margin-right: 5%;
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 46px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .workout {
+    display: block;
+    padding: 40px 5.62% 60px;
+
+    &__group {
+      display: none;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__image_mobile {
+      display: block;
+    }
+
+    &__text {
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 28px;
+
+      &_mobile {
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &__links_mobile {
+      display: flex;
+    }
+
+    &__link_mobile {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .workout {
+    &__title {
+      font-size: 38px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .workout {
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}

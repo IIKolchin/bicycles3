@@ -1,0 +1,10 @@
+.text-mobile {
+  display: none;
+  @extend %text-mobile;
+}
+
+@media (max-width: 900px) {
+  .text-mobile {
+    display: block;
+  }
+}
